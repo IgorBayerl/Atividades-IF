@@ -6,15 +6,14 @@ public class Programa5 {
 	public static void main(String[] args) {
 		
 		int[] numeros;
-		int[] numerosPositivos;
-		int[] numerosNegativos;
 		
-		int numeroP = 0;
-        int numeroI = 0;
+		boolean[] numerosTF;
+	
         
         numeros = new int[10];
-        numerosPositivos = new int[numeros.length];
-        numerosNegativos = new int[numeros.length];
+        numerosTF = new boolean[numeros.length];
+        
+     
         
         
         
@@ -28,35 +27,21 @@ public class Programa5 {
     		numeros [i] = x;
     		
     		if(x > 0) {
-    			numerosPositivos [numeroP] = x;
-    			numeroP ++;
+    			numerosTF [i] = true;
+    			
     		}else {
-    			numerosNegativos [numeroI] = x;
-    			numeroI++;
-    		}
+    			numerosTF [i] = false;
     		
+    		}
     		
         }        
         
-        System.out.println("\n Numeros Digitados");
-        for(int i=0; i<numeros.length; i++){
-    		System.out.print( " - " + numeros[i]);
+        System.out.println("\n Resultado");
+        for(int i=0; i<numerosTF.length; i++){
+    		System.out.println( " - " + numerosTF[i]);
     		
     	}
-        System.out.println("\n Numeros Positivos");
-        for(int i=0; i<numerosPositivos.length; i++){
-        	if (numerosPositivos[i] != 0) {
-    		System.out.print( " - " + numerosPositivos[i]);
-        	}
-    		
-    	}
-        System.out.println("\n Numeros Impares");
-        for(int i=0; i<numerosNegativos.length; i++){
-        	if (numerosNegativos[i] != 0) {
-    		System.out.print( " - " + numerosNegativos[i]);
-        	}
-    		
-    	}
+        
 		
 	}
 }
